@@ -1,9 +1,24 @@
 function join(str, concatStr) {
-  return concatStr;
+  
+  var paste = str[0]
+
+  for(i=1 ; i<str.length ; i++){
+    paste = paste + concatStr+str[i]
+  }
+  
+  return paste;
 }
 
+
+
 function repeat(str, times) {
-  return times;
+
+  var str_rep = ''
+  for( var i=1 ; i<=times ; i++){
+    str_rep =  str_rep + str
+  }
+
+  return str_rep;
 }
 
 console.log(join('a', '!'));
