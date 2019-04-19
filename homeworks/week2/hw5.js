@@ -1,25 +1,16 @@
 function join(str, concatStr) {
-  
-  var paste = str[0]
-
-  for(i=1 ; i<str.length ; i++){
-    paste = paste + concatStr+str[i]
+  let paste = str[0];
+  for (let i = 1; i < str.length; i += 1) {
+    paste = paste + concatStr + str[i];
   }
-  
   return paste;
 }
-
-
-
 function repeat(str, times) {
-
-  var str_rep = ''
-  for( var i=1 ; i<=times ; i++){
-    str_rep =  str_rep + str
+  let StrRep = '';
+  for (let i = 1; i <= times; i += 1) {
+    StrRep += str;
   }
-
-  return str_rep;
+  return StrRep;
 }
-
 console.log(join('a', '!'));
 console.log(repeat('a', 5));
