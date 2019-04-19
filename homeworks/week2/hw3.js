@@ -1,12 +1,8 @@
 function reverse(str) {
-
-  var str_rev = ""
-
-  for(var i =str.length-1 ; i >=0 ; i--){
-    str_rev = str_rev+ str[i]
+  let StrRev = '';
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    StrRev += str[i];
   }
-
-  console.log(str_rev);
+  console.log(StrRev);
 }
-
 reverse('hello');
