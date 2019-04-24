@@ -5,8 +5,10 @@ function add(a, b) {
 
   if (a.length >= b.length) {
     numB = '0'.repeat(a.length - b.length) + b;
+    numA = a;
   } else {
     numA = '0'.repeat(b.length - a.length) + a;
+    numB = b;
   }
 
   numA = numA.split('');
@@ -16,10 +18,10 @@ function add(a, b) {
     numC[i] = parseInt(numA[i], 10) + parseInt(numB[i], 10);
   }
 
-  for (let i = 0; i < numC.length; i += 1) {
-    if (numC[i + 1] > 9) {
-      numC[i] += 1;
-      numC[i + 1] -= 10;
+  for (let i = numC.length - 1; i > 0; i -= 1) {
+    if (numC[i] > 9) {
+      numC[i - 1] += 1;
+      numC[i] -= 10;
     }
   }
 
