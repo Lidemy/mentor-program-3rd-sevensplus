@@ -1,20 +1,15 @@
 function alphaSwap(str) {
-  const StrCopy = '';
+  let strCopy = '';
   for (let i = 0; i < str.length; i += 1) {
     if (str[i] >= 'a' && str[i] <= 'z') {
-      StrCopy[i] = str[i].toUpperCase();
+      strCopy += str[i].toUpperCase();
     } else if (str[i] >= 'A' && str[i] <= 'Z') {
-      StrCopy[i] = str[i].toLowercase();
+      strCopy += str[i].toLowerCase();
     } else {
-      StrCopy[i] = str[i];
+      strCopy += str[i];
     }
   }
-  return (StrCopy);
+  return (strCopy);
 }
 
-
-console.log(alphaSwap('helLo'))
-/*
-alphaSwap('HellO');
 module.exports = alphaSwap;
-*/
