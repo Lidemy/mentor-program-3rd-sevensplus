@@ -9,7 +9,7 @@ function alphaSwap(str) {
       strCopy += str[i];
     }
   }
-  return (strCopy);
+  return strCopy;
 }
 
 module.exports = alphaSwap;
