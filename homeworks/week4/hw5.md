@@ -17,7 +17,8 @@ API（Application programming interface）中文翻做應用程式介面。簡�
 - 4xx ：失敗（client）   
 401：未認證，或被拒絕存取。404：失敗，請求未被實現，但允許後續請求。408；請求超時。409：請求存在衝突無法處理。410：請求的資源不再可用。
 
-- 5xx ：伺服器錯誤，不支援某功能。503：伺服器過載
+- 5xx ：伺服器錯誤，不支援某功能。
+503：伺服器過載
 
 參考資料：  
 [MDN](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status)  
@@ -25,4 +26,16 @@ API（Application programming interface）中文翻做應用程式介面。簡�
 
 
 ## 假設你現在是個餐廳平台，需要提供 API 給別人串接並提供基本的 CRUD 功能，包括：回傳所有餐廳資料、回傳單一餐廳資料、刪除餐廳、新增餐廳、更改餐廳，你的 API 會長什麼樣子？請提供一份 API 文件。
+
+### 我家餐廳 API 
+
+URL：https://api.privateKitchen.com
+
+| 說明     | Method | path       | 參數                   | 範例             |
+|--------|--------|------------|----------------------|----------------|
+| 檢視餐廳列表 | GET    | /lists     | limit: 餐廳數           | /lists?limit=5 |
+| 檢視某家餐廳 | GET    | /lists/:id | 無                    | /lists/10      |
+| 新增餐廳   | POST   | /lists     | name: 餐廳名 , address: 地址 , tel: 電話 | 無              |
+| 刪除餐廳   | DELETE   | /lists/:id     | 無 | 無              |
+| 更改餐廳資訊   | PATCH   | /lists/:id     | name: 餐廳名 , address: 地址 , tel: 電話 | 無              |
 
