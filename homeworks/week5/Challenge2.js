@@ -1,7 +1,36 @@
 // 挑戰賽二
-// 剩一題
-// 首領的名字
 
+// 首領的名字
+// 這題不知道少了什麼
+function pb(A, B) {
+  const a = A.split('#');
+  const c = [];
+
+  for(let i = 0; i < B.length; i += 1) {
+    if (B[i].indexOf(a[0]) === 0) {
+      c.push('POSSIBLE');
+    } else {
+      c.push('IMPOSSIBLE');
+    }
+  }
+
+  if (a[1] !== '') {
+    for (let i = 0; i < B.length; i += 1) {
+      if (B[i].indexOf(a[1]) !== (B[i].length - a[1].length)) {
+        c[i] = 'IMPOSSIBLE';
+      }
+      if (a[0] !== '' && a[0].length + a[1].length === B[i].length) c[i] = 'IMPOSSIBLE';
+    }
+  }
+
+  if (a[0] === '' || a[1] === '') {
+    for (let i = 0; i < B.length; i += 1) {
+      if (a[0].length + a[1].length === B[i].length) c[i] = 'IMPOSSIBLE';
+    }
+  }
+
+  return c;
+}
 
 // 優惠方案
 function pa(a) {
@@ -47,7 +76,7 @@ function pd(p) {
 }
 
 // PK賽
-function pe(A,B) {
+function pe(A, B) {
   const a = [];
   a[0] = A.split('').filter(c => c === 'O').length;
   a[1] = A.split('').filter(c => c === 'X').length;
