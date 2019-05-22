@@ -1,0 +1,86 @@
+<!-- chrome表單 -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>wk7-hw2 by sevenplus</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <div class="background__picture">
+            <form onsubmit="return result()" accept-charset="utf-8">
+                <div class="form">
+                    <div class="form__titles">
+                        <h1>程式導師實驗計畫第三期報名表單</h1>
+                        <span>詳情請參考：……<br>
+                            填完之後務必按照文章內的說明再寄信給我，才算報名成功喔
+                        </span></br>
+                        <span class="title__star"> *必填</span>
+                    </div>
+                    <main class="form__detail">
+                        <div class="form__col1">
+                            <div class="form__question">
+                                電子郵件地址<span class="star"> *</span>
+                            </div>
+                            <div><input type="email" class="email__box" name="det1" placeholder="交出你的 e-mail 地址吧 (╯°Д°)╯ ┴─┴"/></div>
+                            <div class="must__write">這是必填問題</div>
+                            <div class="email__error">格式錯誤</div>
+                        </div>
+                        <div class="form__col2" >
+                            <div class="form__question">
+                                暱稱<span class="star"> *</span></br>
+                                <span class="explain">該如何稱呼你</span>
+                            </div>
+                            <div><input type="text" class="name__box" name="det2" placeholder="小名暱稱綽號也行 (`・ω・´)"/></div>
+                            <div class="must__write">這是必填問題</div>
+                        </div>
+                        <div class="form__col__choose">
+                            <div class="form__question">
+                                報名類型<span class="star"> *</span>
+                            </div>
+                            <div class="type__box">
+                                <input type="radio" name="beginner" id="beginner"/>
+                                <label for="beginner">從零開始基礎班（兩個月後開始收保證金5000，淘汰不退還，結業後兩個月內找到工作付一個月半薪水，沒工作不用付）</label><br/><br/>
+                                <input type="radio" name="advanced" id="advanced"/>
+                                <label for="advanced">在職工程師加強班（兩個月後開始收保證金5000，三個月時收學費35000元台幣，被淘汰不退還）</label>
+                            </div>
+                            <div class="must__write">這是必填問題</div>
+                        </div>
+                        <div class="form__col3">
+                            <div class="form__question">
+                                現在的職業<span class="star"> *</span><br/>
+                                <span class="explain">範例：學生、前端工程師、待業中blabla</span>
+                            </div>
+                            <div><input type="text" class="job__box" name="det3" placeholder="平常在幹嘛呢"/></div>
+                            <div class="must__write">這是必填問題</div>
+                        </div>
+                        <div class="form__col4">
+                            <div class="form__question">
+                                    怎麼知道這個計畫的<span class="star"> *</span>
+                            </div>
+                            <div><input type="text" class="howToKnow__box" name="det4" placeholder="救救需要寫行銷報告的小編 (X)"/></div>
+                            <div class="must__write">這是必填問題</div>
+                        </div>
+                        <div class="form__col5">
+                            <div class="form__question">
+                                是否有相關程式背景<span class="star"> *</span><br/>
+                                <span class="explain">範例：無、高中時學過C++、學過一點網頁前端、目前在資策會上課</span>
+                            </div>
+                            <div><input type="text" class="background__box" name="det5" placeholder="實話實說不用怕 ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡ "></div>
+                            <div class="must__write">這是必填問題</div>
+                        </div>
+                        <div class="form__other" >
+                            <div class="form__question">
+                                其他<br/>
+                                <span class="explain">任何你想說的</span>
+                            </div>
+                            <div><input type="text" class="other__box" placeholder="有任何問題或想法都歡迎提出 (*ﾟ∀ﾟ*)"></div>
+                        </div>
+                        <div class="form__submits"><input class="tosubmit" type="submit" value="提交"></div>
+                    </main>
+                </div>
+            </form>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

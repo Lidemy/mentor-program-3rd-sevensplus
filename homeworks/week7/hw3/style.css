@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Callbri';
+}
+
+.calculator{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px; 
+    border: 1px silver solid;
+    border-radius: 5px;
+}
+
+
+button{
+    width: 40px;
+    height: 40px;
+}
+
+.display{
+    box-sizing: border-box;
+    font-size: 16pt;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    text-align: right;
+    line-height: 30px;
+    border: 1px lightsteelblue solid;
+    border-radius: 3px
+}
+
+.buttoms > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button{
+    background: lightblue;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 1px solid skyblue;
+    border-right: 1px solid skyblue;
+}
+
+.empty{
+    visibility: hidden;
+}
+
+button:focus{
+    outline: 0;
+}
