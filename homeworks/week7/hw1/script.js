@@ -16,7 +16,7 @@ function gameStart() {
   document.querySelector('.list').style.visibility = 'hidden';
 
   games = setTimeout(function() {
-    document.querySelector('body').style.background = `${color()}`;
+    document.querySelector('body').style.background = color();
     start = Date.now();
   }, time);
 }

@@ -23,16 +23,16 @@ document.querySelector('.tosubmit').addEventListener('click',
     document.querySelector('.form__col__choose > .must__write').style.visibility = (radio__box) ? 'hidden' : 'visible';
 
     const email__test = document.querySelector('input[type="email"]').value;
-    let email__detect = 0;
+    let isEmail__False = 0;
     if (email__test.includes('@') === -1 || email__test.indexOf('.') === -1) {
-      email__detect += 1;
+      isEmail__False += 1;
     } else if (email__test.indexOf('@') === email__test.length - 1 || email__test.indexOf('.') === email__test.length - 1) {
-      email__detect += 1;
+      isEmail__False += 1;
     }
 
-    document.querySelector('.form__col1').style.background = (email__detect > 0) ? 'pink' : 'initial';
-    document.querySelector('.email__error').style.visibility = (email__detect > 0) ? 'visible' : 'hidden';
-    detect = (email__detect > 0) ? detect + 1 : detect;
+    document.querySelector('.form__col1').style.background = (isEmail__False > 0) ? 'pink' : 'initial';
+    document.querySelector('.email__error').style.visibility = (isEmail__False > 0) ? 'visible' : 'hidden';
+    detect = (isEmail__False > 0) ? detect + 1 : detect;
 
     if (detect > 0) e.preventDefault();
   });

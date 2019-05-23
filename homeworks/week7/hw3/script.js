@@ -4,7 +4,6 @@ let calC = '';
 
 function cal__remember(e) {
   calC = e.path[0].id;
-  console.log(calC);
 }
 
 function num__remember(e) {
@@ -17,62 +16,26 @@ function num__remember(e) {
   }
 }
 
-let cals = ['add', 'min', 'mul', 'div'];
+let cals = document.querySelectorAll('.cal__instruction');
 for (let i = 0; i < 4; i += 1) {
-  document.querySelector(`.cal__${cals[i]}`).addEventListener('click', cal__remember);
+  document.querySelector(`#${cals[i].id}`).addEventListener('click', cal__remember);
 }
 
 for (let i = 0; i <= 9; i += 1) {
   document.querySelector(`.num${i}`).addEventListener('click', num__remember);
 }
 
+document.querySelector(`.num__dot`).addEventListener('click', num__remember);
+
 document.querySelector('.equal').addEventListener('click', function() {
-  numA.reverse();
-  numB.reverse();
-  let ans = [];
+  const num__A = numA.join('');
+  const num__B = numB.join('');
 
-  if (calC === 'add') {
-
-    let add = 0;
-    for (let i = 0, j = 0; numA.length - i > 0 || numB.length - j > 0; i += 1, j += 1) {
-      const temp = add + parseInt(numA[i] || 0, 10) + parseInt(numB[i] || 0, 10);
-      if (temp >= 10) {
-        ans.push(temp - 10);
-        add = 1;
-      } else {
-        ans.push(temp);
-        add = 0;
-      }
-    }
-    if (add > 0) ans.push(add);
-    document.querySelector('.display').innerText = ans.reverse().join('');
-  }
-
-  else if (calC === 'min') {
-    let lend = 0;
-    for (let i = 0, j = 0; numA.length - i > 0 || numB.length - j > 0; i += 1, j += 1) {
-      if (numA[i] < numB[j]) {
-        ans.push(lend + parseInt(numA[i], 10) + 10 - parseInt(numB[j], 10));
-        lend = -1;
-      } else if (numA[i] == numB[j]) {
-        if (lend === -1) {
-          ans.push(lend + parseInt(numA[i], 10) + 10 - parseInt(numB[j], 10));
-          lend = -1;
-        }
-      } else if (numA[i] == '0') {
-        if (lend === -1) {
-          ans.push(9);
-          lend = -1;
-        }
-      } else if (numB[j] == undefined) {
-        ans.push(lend + parseInt(numA[i], 10));
-        lend = 0;
-      } else {
-        ans.push(lend + parseInt(numA[i], 10) - parseInt(numB[j], 10));
-        lend = 0;
-      }
-    }
-    document.querySelector('.display').innerText = ans.reverse().slice(ans.findIndex(n => n > 0)).join('');
+  switch (calC){
+    case 'add': document.querySelector('.display').innerText = parseFloat(num__A, 10) + parseFloat(num__B, 10); break;
+    case 'min': document.querySelector('.display').innerText = parseFloat(num__A, 10) - parseFloat(num__B, 10); break;
+    case 'mul': document.querySelector('.display').innerText = parseFloat(num__A, 10) * parseFloat(num__B, 10); break;
+    case 'div': document.querySelector('.display').innerText = parseFloat(num__A, 10) / parseFloat(num__B, 10); break;
   }
 });
 
