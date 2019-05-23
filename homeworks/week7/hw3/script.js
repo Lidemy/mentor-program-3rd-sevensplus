@@ -28,14 +28,14 @@ for (let i = 0; i <= 9; i += 1) {
 document.querySelector(`.num__dot`).addEventListener('click', num__remember);
 
 document.querySelector('.equal').addEventListener('click', function() {
-  const num__A = numA.join('');
-  const num__B = numB.join('');
+  const numA = numA.join('');
+  const numB = numB.join('');
 
   switch (calC){
-    case 'add': document.querySelector('.display').innerText = parseFloat(num__A, 10) + parseFloat(num__B, 10); break;
-    case 'min': document.querySelector('.display').innerText = parseFloat(num__A, 10) - parseFloat(num__B, 10); break;
-    case 'mul': document.querySelector('.display').innerText = parseFloat(num__A, 10) * parseFloat(num__B, 10); break;
-    case 'div': document.querySelector('.display').innerText = parseFloat(num__A, 10) / parseFloat(num__B, 10); break;
+    case 'add': document.querySelector('.display').innerText = parseFloat(numA, 10) + parseFloat(numB, 10); break;
+    case 'min': document.querySelector('.display').innerText = parseFloat(numA, 10) - parseFloat(numB, 10); break;
+    case 'mul': document.querySelector('.display').innerText = parseFloat(numA, 10) * parseFloat(numB, 10); break;
+    case 'div': document.querySelector('.display').innerText = parseFloat(numA, 10) / parseFloat(numB, 10); break;
   }
 });
 
