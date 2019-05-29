@@ -34,7 +34,6 @@ header{
     margin: 10px;
     height: 50px;
 
-    display: flexbox;
     vertical-align: middle;
 }
 
@@ -48,6 +47,9 @@ header{
 .word{
     width: 188px;
     margin-right: 0;
+
+    vertical-align: middle;
+    line-height: 25px;
 }
 
 
