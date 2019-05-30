@@ -1,0 +1,68 @@
+body{
+    background: url('https://cdn.pixabay.com/photo/2019/05/05/19/12/landscape-4181457_1280.jpg') no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    font-size: 28pt;
+    color: black;
+
+    width: fit-content;
+    background: rgba(255,255,255,0.7);
+    margin: 30px auto;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.videoList{
+    text-align: center
+}
+
+.video{
+    width: 268px;
+    height: 150px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.info{
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 10px;
+    height: 50px;
+
+    vertical-align: middle;
+}
+
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+.word{
+    width: 188px;
+    margin-right: 0;
+
+    vertical-align: middle;
+    line-height: 25px;
+}
+
+
+.info div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.block{
+    display: inline-block;
+    margin: 10px;
+    
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    text-align: left;
+}

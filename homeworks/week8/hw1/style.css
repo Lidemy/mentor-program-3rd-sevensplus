@@ -1,0 +1,64 @@
+.lotteryTime{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    font-size: 24pt;
+    font-family: '微軟正黑體';
+    font-weight: bolder;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+    background: lightgreen;
+    border-radius: 10px;
+    border-right: 2px grey solid;
+    border-bottom: 2px grey solid;
+}
+
+.lotteryTime:hover{
+    cursor: pointer;
+}
+
+body{
+    margin: 0;
+    background:bisque;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    font-size: 20pt;
+    font-family: '微軟正黑體';
+    display: flexbox;
+    position: relative;
+    top: 5%;
+    text-align: center;
+    align-self: center;
+    visibility: hidden;
+}
+
+main div{
+    margin: 20px auto;
+}
+
+.picture{
+    width: 400px;
+    height: 300px;
+}
+
+
+.end{
+    width: fit-content;
+    background: rgba(255,255,255,0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.end:hover{
+    cursor: pointer;
+}
