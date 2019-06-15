@@ -15,7 +15,7 @@ request.onload = function() {
 
 request.send();
 
-document.querySelector('.submits').onclick = () =>{
+document.querySelector('.submits').onclick = () => {
   const postText = document.querySelector("input[class='words']").value;
 
   request.open('POST', 'https://lidemy-book-store.herokuapp.com/posts', true);
