@@ -11,8 +11,8 @@
 #### messenger
 | 欄位名稱 | 欄位型態 | 說明 |
 |----------|----------|------|
-|  id      | integer     | 個人 id   |
-|mess_id   |integer      | 留言id    |
+|message_id| integer     | 留言 id   |
+|user_id   |integer      | 使用者 id    |
 |comment   | text        | 留言內容  |
-|time      |  | 留言時間  |
+|time      |time  | 留言時間  |
 
