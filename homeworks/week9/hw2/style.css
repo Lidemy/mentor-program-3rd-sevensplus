@@ -1,0 +1,165 @@
+/*  主頁面  */
+.index{
+    font-family: 微軟正黑體;  
+    background:url("./bg1.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.index > .alert{
+    background: rgba(255,255,255,0.5);
+    width: fit-content;
+}
+.index__nav{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.index__nav > span{
+    background: rgba(255,255,255,0.3);
+    padding: 7px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+.index__nav > .helloName{
+    background: none;
+    margin-right: 10px;
+}
+.index__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+main > div{
+    display: inline-block;
+}
+.oldpost{
+    width: 60%;
+    text-align: center;
+}
+.oldpost > .piece{
+    background: rgba(230,230,230,0.3);
+    width: 35%;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;    
+}
+.piece > div{
+    background:rgba(255,255,255,0.4); 
+    padding: 10px;
+    text-align: left;
+}
+.author{
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.content{
+    height: 15%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.piece > .clock{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius:3px;
+    text-align: right; 
+    font-size: 10px;
+}
+.newpost{
+    position: fixed;
+    top: 40%;
+    left: 60%;
+}
+.index_button5{
+    font-family: "微軟正黑體";
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.newpost > form > textarea{
+    height: 80px;
+    width: 200px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    font-family: "微軟正黑體";
+}
+.index_notice{
+    background: rgba(255,255,255,0.4);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*  註冊頁面  */
+.register{
+    background: url('./bg2.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    font-family: "微軟正黑體";
+}
+.reg__box{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background:rgba(255,255,255,0.85);
+    text-align: center;
+    margin:auto;
+}
+.reg__box > form > div{
+    margin: 10px 0;
+}
+.reg__sub{
+    margin-top: 15px;
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
+
+/*  登入頁面  */
+.signup{
+    background: url('./bg2.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    font-family: "微軟正黑體";
+}
+.sign__box{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.85);
+    text-align: center;
+    margin:auto;
+}
+.sign__form > div{
+    margin: 10px 0;
+}
+.sign__sub{
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
+
+
+/*  改暱稱頁面  */
+
+.change__name{
+    background: url('./bg2.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+}
+.change__box{
+    width: fit-content;
+    padding: 20px;
+    margin:auto;
+    background: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "微軟正黑體";
+}
+.old__nickname{
+    text-align: left;
+}
+.change__box > div > div{
+    margin: 15px auto;
+}
+.change__name__sub{
+    margin-top: 15px;
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
