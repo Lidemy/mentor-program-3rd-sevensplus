@@ -22,7 +22,7 @@
             </main>
             <script type="text/javascript">
                 document.querySelector('.delete_sure').onclick = (a) => {
-                window.location.href = `handleDeletePost.php`;  
+                    window.location.href = `handleDeletePost.php`;  
                 }
                 document.querySelector('.delete_cancel').onclick = (a) => {
                     window.location.href = `manageComment.php`;  

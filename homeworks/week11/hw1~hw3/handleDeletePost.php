@@ -16,5 +16,4 @@ if ($match_author == $certification){
 
 setcookie('mess_id','',time()-3600);
 header("Location: ./manageComment.php");
-
 ?>

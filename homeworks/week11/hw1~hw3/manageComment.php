@@ -15,32 +15,31 @@
         <span class="index_out jump_button3" id="handleSignOut">登出</span>
     </nav>
     <div class="manage__title">管理留言</div>
-    <main class="manage__main"> 
-    <?php
-        $certification = $_COOKIE["certification"];
-        $sql_match = "SELECT `sevenplus_users_id` FROM `sevenplus_certificate` WHERE `certificate_word` = '$certification'";
-        $match_id = $conn->query($sql_match)->fetch_assoc()["sevenplus_users_id"];
-        $sql_result = "SELECT * FROM `sevenplus_message` WHERE `sevenplus_users_id` = $match_id ORDER BY time DESC";
-        $result = $conn->query($sql_result);
-        $nic = $_COOKIE['nickname'];
-        $number = $result->num_rows;
-        
-        if($result->num_rows > 0){
-            for($i=1;$i<=$number; $i++){
-                $row = $result->fetch_assoc();
-                $com_id=$row['message_id'];
+    <main class="manage__main">
+        <?php
+            $certification = $_COOKIE["certification"];
+            $sql_match = "SELECT `sevenplus_users_id` FROM `sevenplus_certificate` WHERE `certificate_word` = '$certification'";
+            $match_id = $conn->query($sql_match)->fetch_assoc()["sevenplus_users_id"];
+            $sql_result = "SELECT * FROM `sevenplus_message` WHERE `sevenplus_users_id` = $match_id ORDER BY time DESC";
+            $result = $conn->query($sql_result);
+            $nic = $_COOKIE['nickname'];
+            $number = $result->num_rows;
+            
+            if($result->num_rows > 0){
+                for($i=1;$i<=$number; $i++){
+                    $row = $result->fetch_assoc();
+                    $com_id=$row['message_id'];
 
-                echo "<div class='manage_comment_piece'>";
-                echo "<div class='manage_comment_content'>" . $row['message'] . "</div>";
-                echo "<div class='manage_comment_clock'>" . $row['time'] . "</div>";
-                echo "<span class='edit_comment edit_button$i' id='$com_id'>編輯留言</span><span class='delete_comment del_button$i' id='$com_id'>刪除留言</span>";
-                echo "</div>";      
+                    echo "<div class='manage_comment_piece'>";
+                    echo "<div class='manage_comment_content'>" . $row['message'] . "</div>";
+                    echo "<div class='manage_comment_clock'>" . $row['time'] . "</div>";
+                    echo "<span class='edit_comment edit_button$i' id='$com_id'>編輯留言</span><span class='delete_comment del_button$i' id='$com_id'>刪除留言</span>";
+                    echo "</div>";      
+                }
             }
-        }
-    ?>      
+        ?>      
     </main>
     <script type="text/javascript">let comment_num = <?php echo $number?>;</script>
     <script src="./script2.js"></script>
 </body>
-
 </Html>
