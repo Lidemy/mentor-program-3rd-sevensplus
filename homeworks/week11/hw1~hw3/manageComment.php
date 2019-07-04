@@ -1,6 +1,5 @@
 <?php require_once('./conn.php')?>
 <Html>
-
 <head>
     <meta charset="UTF-8">
     <title>留言板</title>
@@ -32,8 +31,8 @@
                     echo "<div class='manage_comment_piece'>";
                     echo "<div class='manage_comment_content'>" . $row['message'] . "</div>";
                     echo "<div class='manage_comment_clock'>" . $row['time'] . "</div>";
-                    echo "<span class='edit_comment edit_button$i' id='$com_id'>編輯留言</span><span class='delete_comment del_button$i' id='$com_id'>刪除留言</span>";
-                    echo "</div>";      
+                    echo "<a href='./changePost.php?mess_id=$com_id'>編輯留言</a><a href='./deletePost.php?mess_id=$com_id'>刪除留言</a>";
+                    echo "</div>";
                 }
             }
         ?>      

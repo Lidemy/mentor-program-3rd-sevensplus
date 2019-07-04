@@ -1,6 +1,5 @@
 <?php require_once('./conn.php')?>
 <Html>
-
 <head>
     <meta charset="UTF-8">
     <title>留言板</title>
@@ -10,12 +9,12 @@
 <body class="index">
     <div class="alert">注意：本站為練習用，註冊時請勿使用任何真實資訊</div>
     <nav class="index__nav">
-        <?php if (count($_COOKIE) > 0) echo "<span class='helloName'>哈囉，" . $_COOKIE['nickname'] . "</span>";?>
-        <span class="index_register index_button1" id="register">註冊</span>
-        <span class="index_sign index_button2" id="sign">登入</span>
-        <span class="index_manage_comment index_button3" id="manageComment">管理留言</span>
-        <span class="index_change_name index_button4" id="changeName">更改暱稱</span>
-        <span class="index_out index_button5" id="handleSignOut">登出</span>
+        <?php if (isset($_COOKIE["certification"])) echo "<span class='helloName'>哈囉，" . $_COOKIE['nickname'] . "</span>";?>
+        <a class="index_register" href="./register.php">註冊</a>
+        <a class="index_sign" href="./sign.php">登入</a>
+        <a class="index_manage_comment" href="./manageComment.php">管理留言</a>
+        <a class="index_change_name" href="./changeName.php">更改暱稱</a>
+        <a class="index_out" href="./handleSignOut.php">登出</a>
     </nav>
     <div class="index__title">留言板</div>
     <main class="index__main">
