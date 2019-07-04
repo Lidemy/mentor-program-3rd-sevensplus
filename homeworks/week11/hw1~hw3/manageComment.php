@@ -1,6 +1,5 @@
 <?php require_once('./conn.php')?>
 <Html>
-
 <head>
     <meta charset="UTF-8">
     <title>留言板</title>
@@ -8,11 +7,10 @@
 </head>
 
 <body class="manage__post__body">
-    <nav class="index__nav">
+    <nav class="manage__post__nav">
         <span class="helloName"><?php echo"哈囉，" . $_COOKIE["nickname"]?></span>
-        <span class="index_manage_comment jump_button1" id="index">回到主頁面</span>
-        <span class="index_change jump_button2" id="changeName">更改暱稱</span>
-        <span class="index_out jump_button3" id="handleSignOut">登出</span>
+        <a href="./index.php">回到主頁面</a>
+        <a href="./handleSignOut.php">登出</a>
     </nav>
     <div class="manage__title">管理留言</div>
     <main class="manage__main">
@@ -33,8 +31,8 @@
                     echo "<div class='manage_comment_piece'>";
                     echo "<div class='manage_comment_content'>" . $row['message'] . "</div>";
                     echo "<div class='manage_comment_clock'>" . $row['time'] . "</div>";
-                    echo "<span class='edit_comment edit_button$i' id='$com_id'>編輯留言</span><span class='delete_comment del_button$i' id='$com_id'>刪除留言</span>";
-                    echo "</div>";      
+                    echo "<a href='./changePost.php?mess_id=$com_id'>編輯留言</a><a href='./deletePost.php?mess_id=$com_id'>刪除留言</a>";
+                    echo "</div>";
                 }
             }
         ?>      

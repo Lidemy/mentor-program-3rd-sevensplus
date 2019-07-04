@@ -3,9 +3,7 @@ require_once('./conn.php');
 
 $post = $_POST["changePost"];
 $certification = $_COOKIE["certification"];
-$mess_id = $_COOKIE["mess_id"];
-$path = $_COOKIE["path"];
-
+$mess_id = $_GET["mess_id"];
 
 $sql_author = "SELECT `sevenplus_users_id` FROM `sevenplus_certificate` WHERE `certificate_word` = '$certification'";
 $match_author = $conn->query($sql_author)->fetch_assoc()["sevenplus_users_id"];
@@ -17,6 +15,5 @@ if ($match_author == $certification){
     $result = $conn->query($sql_update);
 }
 
-setcookie('mess_id','',time()-3600);
 header("Location: ./manageComment.php");
 ?>

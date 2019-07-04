@@ -15,11 +15,13 @@
     right: 20px;
     top: 20px;
 }
-.index__nav > span{
+.index__nav > a{
     background: rgba(255,255,255,0.3);
     padding: 7px;
     border-radius: 5px; 
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 .index__nav > .helloName{
     margin-right: 10px;
@@ -180,6 +182,22 @@
     background-size: cover;
     font-family: "微軟正黑體"
 }
+.manage__post__nav{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.manage__post__nav > a{
+    background: rgba(255,255,255,0.3);
+    padding: 7px;
+    border-radius: 5px; 
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.manage__post__nav > span{
+    margin-right: 10px;
+}
 .manage__title{
     text-align: center;
     font-size: 30px;
@@ -187,14 +205,15 @@
     margin-top: 50px;
 }
 .manage__main{
-    display: inline-flex;
+    display: block;
 }
 .manage_comment_piece{
     margin: 30px;
     padding: 20px;
     border-radius: 5px;
     background: rgba(255,255,255,0.5);
-    width: 20%;
+    width: 200px;
+    display: inline-block;
 }
 .manage_comment_content{
     background: rgba(255,255,255,0.4);
@@ -206,13 +225,16 @@
     font-size: 10px;
     text-align: right;
 }
-.manage_comment_piece > span{
+.manage_comment_piece > a{
     margin: auto 10px;
     background: rgb(190, 239, 245);
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
+
 
 /*  刪除留言  */
 .del__post{
@@ -240,12 +262,14 @@
     padding: 20px 20px;
     border-radius: 5px;
 }
-.del__box > span{
+.del__box > a{
     margin: 0 20px;
     padding: 10px;
     background: rgb(173, 216, 230);
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 /*  更改留言  */
