@@ -61,7 +61,7 @@
                                 child_post($sub_info,$info["parent"],$sub_info["sevenplus_users_id"]);
                             }
                         }
-                        post_box($mess_id,"reply_box","post_reply_input");
+                        if (login_verify()) post_box($mess_id,"reply_box","post_reply_input");
                         echo "</div>";
                     }
                 } else {
@@ -85,7 +85,7 @@
                                 child_post($sub_info,$info["sevenplus_users_id"],$sub_info["sevenplus_users_id"]);
                             }
                         }         
-                        post_box($mess_id,"reply_box","post_reply_input");
+                        if (login_verify()) post_box($mess_id,"reply_box","post_reply_input");
                         echo "</div>";
                     }
                 }
