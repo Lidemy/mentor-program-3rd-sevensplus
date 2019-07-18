@@ -33,9 +33,9 @@
                 @$page = $_GET['page'];
                 if ($page){
                     $showing_page = ($page-1)*$size;
-                    $sql_now_page = " SELECT a.nickname, b.message, b.time,b.sevenplus_users_id, b.parent, b.message_id, b.isChild
-                    FROM sevenplus_message AS b LEFT JOIN sevenplus_users AS a ON b.sevenplus_users_id = a.id
-                    WHERE b.parent = 0 ORDER BY b.time DESC LIMIT $showing_page,$size";
+                    $sql_now_page = " SELECT u.nickname, m.message, m.time,m.sevenplus_users_id, m.parent, m.message_id, m.isChild
+                    FROM sevenplus_message AS m LEFT JOIN sevenplus_users AS u ON m.sevenplus_users_id = u.id
+                    WHERE m.parent = 0 ORDER BY m.time DESC LIMIT $showing_page,$size";
                     $post_result = $conn->query($sql_now_page);
 
                     $num_post = post_numbers($post_result);
@@ -44,9 +44,9 @@
                         $mess_id = $info["message_id"];
                         parent_post($info);
                         if ($info["isChild"] > 0){
-                            $sql_sub_post = " SELECT a.nickname, b.message, b.time,b.sevenplus_users_id, b.message_id, b.parent
-                            FROM sevenplus_message AS b LEFT JOIN sevenplus_users AS a ON b.sevenplus_users_id = a.id
-                            WHERE b.parent = $mess_id ORDER BY b.time";
+                            $sql_sub_post = " SELECT u.nickname, m.message, m.time,m.sevenplus_users_id, m.message_id, m.parent
+                            FROM sevenplus_message AS m LEFT JOIN sevenplus_users AS u ON m.sevenplus_users_id = u.id
+                            WHERE m.parent = $mess_id ORDER BY m.time";
                             $sub_post_result = $conn->query($sql_sub_post);
                             for($j = 1; $j <= $sub_post_result->num_rows; $j += 1){
                                 $sub_info = $sub_post_result->fetch_assoc();
@@ -57,9 +57,9 @@
                         echo "</div>";
                     }
                 } else {
-                    $sql_origin = " SELECT a.nickname, b.message, b.time,b.sevenplus_users_id,b.message_id, b.parent, b.isChild
-                    FROM sevenplus_message AS b LEFT JOIN sevenplus_users AS a ON b.sevenplus_users_id = a.id
-                    WHERE b.parent = 0 ORDER BY b.time DESC LIMIT 0,$size";
+                    $sql_origin = " SELECT u.nickname, m.message, m.time,m.sevenplus_users_id,m.message_id, m.parent, m.isChild
+                    FROM sevenplus_message AS m LEFT JOIN sevenplus_users AS u ON m.sevenplus_users_id = u.id
+                    WHERE m.parent = 0 ORDER BY m.time DESC LIMIT 0,$size";
                     $result_origin = $conn->query($sql_origin);
                     $num_post = post_numbers($result_origin);
                     for($i = 1;$i <= $num_post; $i += 1){
@@ -67,9 +67,9 @@
                         $mess_id = $info['message_id'];
                         parent_post($info);
                         if ($info["isChild"] > 0){
-                            $sql_sub_post = " SELECT a.nickname, b.message, b.time,b.sevenplus_users_id, b.message_id, b.parent
-                            FROM sevenplus_message AS b LEFT JOIN sevenplus_users AS a ON b.sevenplus_users_id = a.id
-                            WHERE b.parent = $mess_id ORDER BY b.time";
+                            $sql_sub_post = " SELECT u.nickname, m.message, m.time,m.sevenplus_users_id, m.message_id, m.parent
+                            FROM sevenplus_message AS m LEFT JOIN sevenplus_users AS u ON m.sevenplus_users_id = u.id
+                            WHERE m.parent = $mess_id ORDER BY m.time";
                             $sub_post_result = $conn->query($sql_sub_post);
                             for($j = 1; $j <= $sub_post_result->num_rows; $j += 1){
                                 $sub_info = $sub_post_result->fetch_assoc();
