@@ -1,0 +1,355 @@
+/*  主頁面  */
+.index{
+    font-family: 微軟正黑體;  
+    background:lightblue;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.index > .alert{
+    background: lightgoldenrodyellow;
+    width: fit-content;
+    padding: 10px;
+}
+.index__nav{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+
+}
+.index__nav > a{
+    background: rgba(255,255,255,0.3);
+    padding: 7px;
+    margin: 0 5px;
+    border-radius: 5px; 
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.index__nav > .helloName{
+    margin-right: 10px;
+}
+.index__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.page_list > a{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 3px;
+    border-radius: 3px;
+    margin: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+}
+.oldpost{
+    width: 70%;
+    text-align: center;
+}
+.pieces{
+    background: rgba(230,230,230,0.3);
+    width: 35%;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;    
+}
+.pieces > div{
+    background:rgba(255,255,255,0.4); 
+    padding: 10px;
+    text-align: left;
+}
+.author{
+    margin-bottom: 10px;
+}
+.content{
+    height: 10%;
+}
+.pieces > .time{
+    text-align: right;
+    font-size: 10px;
+    margin-bottom:10px;
+}
+.pieces > a {
+    background: lightsteelblue;
+    padding: 2px;
+    border-radius:3px;
+    margin: 5px;
+    color: darkslategray;
+    text-decoration: none;
+    cursor:pointer;
+}
+.pieces > .sub_pieces{
+    background: #6fcdc861;
+    width: 85%;
+    margin:5px auto;
+}
+.sub_pieces > div{
+    background:rgba(255,255,255,0.4); 
+    padding: 10px;
+}
+
+.sub_author{
+    margin-bottom: 10px;
+}
+.sub_pieces > .sub_time{
+    text-align: right;
+    font-size: 10px;
+}
+.sub_pieces > a{
+    background: rgba(198, 239, 255, 0.82);
+    padding: 2px;
+    border-radius:3px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: darkslategray;
+    text-decoration: none;
+    display:inline-flex;
+}
+.author_reply > a{
+    background:rgb(233, 225, 240);
+}
+.pieces > .author_reply{
+    background: #e0cae670;
+}
+
+.pieces > .reply_box{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.reply_box > textarea{
+    width: 80%;
+    height: 10%;
+    font-family: "微軟正黑體";
+}
+
+.newpost{
+    position: fixed;
+    top: 40%;
+    left: 60%;
+}
+.post_button{
+    background-color: #e7e7e7;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    font-family: "微軟正黑體";
+    padding: 5px 10px;
+    margin-top: 15px;
+    display: block;
+}
+.newpost > div > textarea{
+    height: 80px;
+    width: 200px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    font-family: "微軟正黑體";
+}
+.index_notice{
+    background: rgba(255,255,255,0.4);
+    padding: 10px;
+    border-radius: 5px;
+}
+.post_numbers{
+    visibility: hidden;
+}
+
+/*  註冊頁面  */
+.register{
+    background: lightblue;
+    background-size: cover;
+    display: flex;
+    font-family: "微軟正黑體";
+}
+.reg__box{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background:rgba(255,255,255,0.5);
+    text-align: center;
+    margin:auto;
+}
+.reg__box > form > div{
+    margin: 10px 0;
+}
+.reg__sub{
+    margin-top: 15px;
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
+
+/*  登入頁面  */
+.signup{
+    background: lightblue;
+    background-size: cover;
+    display: flex;
+    font-family: "微軟正黑體";
+}
+.sign__box{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+    margin:auto;
+}
+.sign__form > div{
+    margin: 10px 0;
+}
+.sign__sub{
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
+
+
+/*  改暱稱頁面  */
+.change__name{
+    background: lightblue;
+    background-size: cover;
+    display: flex;
+}
+.change__box{
+    width: fit-content;
+    padding: 20px;
+    margin:auto;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "微軟正黑體";
+}
+.old__nickname{
+    text-align: left;
+}
+.change__box > div > div{
+    margin: 15px auto;
+}
+.change__name__sub{
+    margin-top: 15px;
+    padding: 5px;
+    font-family: "微軟正黑體";
+}
+
+/*  管理留言  */
+.manage__post__body{
+    background: lightblue;
+    background-size: cover;
+    font-family: "微軟正黑體"
+}
+.manage__post__nav{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.manage__post__nav > a{
+    background: rgba(255,255,255,0.3);
+    padding: 7px;
+    border-radius: 5px; 
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.manage__post__nav > span{
+    margin-right: 10px;
+}
+.manage__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.manage__main{
+    display: block;
+}
+.manage_comment_piece{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    width: 200px;
+    display: inline-block;
+}
+.manage_comment_content{
+    background: rgba(255,255,255,0.4);
+    padding: 20px;
+    border-radius: 5px;
+}
+.manage_comment_clock{
+    margin: 15px auto;
+    font-size: 10px;
+    text-align: right;
+}
+.manage_comment_piece > a{
+    margin: auto 10px;
+    background: rgb(190, 239, 245);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*  刪除留言  */
+.del__post{
+    background: lightblue;
+    background-size: cover;
+    display: flex;
+}
+.del__box{
+    width: fit-content;
+    padding: 20px;
+    margin:auto;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "微軟正黑體";
+}
+.del__title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.del__content{
+    margin: 20px auto 30px auto;
+    background: rgba(255,255,255,0.5);
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+.del__box > a{
+    margin: 0 20px;
+    padding: 10px;
+    background: rgb(173, 216, 230);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+/*  更改留言  */
+.change__post{
+    background: lightblue;
+    background-size: cover;
+    display: flex;
+    font-family: "微軟正黑體";
+}
+.change__post__box{
+    width: fit-content;
+    padding: 20px;
+    margin:auto;
+    background: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    text-align: center;
+}
+.change__post__title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.change__post__form > textarea{
+    margin: 20px auto;
+    text-align: left;
+    height: 100px;
+    width: 200px;
+}
