@@ -44,28 +44,28 @@ i: 4
 console.log('i: ' + i); // 輸出 i:0
 setTimeOut(() => {
     console.log(i)
-  }, 0); // 放入 call stack
+  }, 0); // 放入 web api 計時
 ```
-|call stack          |call queue |待執行序列      |
+|call stack          |call queue |web api        |
 |--------------------|-----------|---------------|
 |main()              |           |               |
 
 
-|call stack          |call queue |待執行序列      |
+|call stack          |call queue |web api        |
 |--------------------|-----------|---------------|
 |console.log('i: ',i)|           |               |
 |main()              |           |               |
 
-|call stack     |call queue |待執行序列      |
+|call stack     |call queue |web api        |
 |---------------|-----------|---------------|
 |setTimeOut(i,0)|           |               |
-|main()         |           |          |
+|main()         |           |               |
 
-|call stack    |call queue |待執行序列      |
+|call stack    |call queue |web api        |
 |--------------|-----------|---------------|
 |main()        |           |setTimeOut(i,0)|
 
-|call stack    |call queue     |待執行序列      |
+|call stack    |call queue     |web api        |
 |--------------|---------------|---------------|
 |main()        |setTimeOut(i,0)|               |
 
@@ -76,22 +76,22 @@ setTimeOut(() => {
 console.log('i: ' + i); // 輸出 i:1
 setTimeOut(() => {
     console.log(i)
-  }, 1000); // 放入 call stack
+  }, 1000); // 放入 web api 計時
 ```
 
-|call stack          |call queue     |待執行序列      |
+|call stack          |call queue     |web api        |
 |--------------------|---------------|---------------|
 |console.log('i: ',i)|setTimeOut(i,0)|               |
 |main()              |               |               |
 
 
-|call stack        |call queue     |待執行序列      |
+|call stack        |call queue     |web api        |
 |------------------|---------------|---------------|
 |setTimeOut(i,1000)|setTimeOut(i,0)|               |
 |main()            |               |               |
 
 
-|call stack    |call queue     |待執行序列         |
+|call stack    |call queue     |web api           |
 |--------------|---------------|------------------|
 |main()        |setTimeOut(i,0)|setTimeOut(i,1000)|
 
@@ -103,20 +103,20 @@ setTimeOut(() => {
 console.log('i: ' + i); // 輸出 i:2
 setTimeOut(() => {
     console.log(i)
-  }, 2000); // 放入 call stack
+  }, 2000); // 放入 web api 計時
 ```
 
-|call stack          |call queue     |待執行序列         |
+|call stack          |call queue     |web api           |
 |--------------------|---------------|------------------|
 |console.log('i: ',i)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()              |               |                  |
 
-|call stack        |call queue     |待執行序列         |
+|call stack        |call queue     |web api           |
 |------------------|---------------|------------------|
 |setTimeOut(i,2000)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()            |               |                  |
 
-|call stack    |call queue     |待執行序列         |
+|call stack    |call queue     |web api           |
 |--------------|---------------|------------------|
 |main()        |setTimeOut(i,0)|setTimeOut(i,1000)|
 |              |               |setTimeOut(i,2000)|
@@ -129,20 +129,20 @@ setTimeOut(() => {
 console.log('i: ' + i); // 輸出 i:3
 setTimeOut(() => {
     console.log(i)
-  }, 3000); // 放入 call stack
+  }, 3000); // 放入 web api 計時
 ```
 
-|call stack          |call queue     |待執行序列         |
+|call stack          |call queue     |web api           |
 |--------------------|---------------|------------------|
 |console.log('i: ',i)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()              |               |setTimeOut(i,2000)|
 
-|call stack        |call queue     |待執行序列         |
+|call stack        |call queue     |web api           |
 |------------------|---------------|------------------|
 |setTimeOut(i,3000)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()            |               |setTimeOut(i,2000)|
 
-|call stack    |call queue     |待執行序列         |
+|call stack    |call queue     |web api           |
 |--------------|---------------|------------------|
 |main()        |setTimeOut(i,0)|setTimeOut(i,1000)|
 |              |               |setTimeOut(i,2000)|
@@ -156,24 +156,24 @@ setTimeOut(() => {
 console.log('i: ' + i); // 輸出 i:4
 setTimeOut(() => {
     console.log(i)
-  }, 4000); // 放入 call stack
+  }, 4000); // 放入 web api 計時
 ```
 
 
-|call stack          |call queue     |待執行序列         |
+|call stack          |call queue     |web api           |
 |--------------------|---------------|------------------|
 |console.log('i: ',i)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()              |               |setTimeOut(i,2000)|
 |                    |               |setTimeOut(i,3000)|
 
 
-|call stack        |call queue     |待執行序列         |
+|call stack        |call queue     |web api           |
 |------------------|---------------|------------------|
 |setTimeOut(i,4000)|setTimeOut(i,0)|setTimeOut(i,1000)|
 |main()            |               |setTimeOut(i,2000)|
 |                  |               |setTimeOut(i,3000)|
 
-|call stack    |call queue     |待執行序列         |
+|call stack    |call queue     |web api           |
 |--------------|---------------|------------------|
 |main()        |setTimeOut(i,0)|setTimeOut(i,1000)|
 |              |               |setTimeOut(i,2000)|
@@ -188,7 +188,7 @@ setTimeOut(() => {
 ```
 
 
-8. setTimeOut 到期後執行
+8. setTimeOut 計時到期後執行
 ```javascript
 // i = 5
 setTimeOut(i,0)  
@@ -199,21 +199,21 @@ setTimeOut(i,4000)
 ```
 
 
-|call stack    |call queue     |待執行序列         |
+|call stack    |call queue     |web api           |
 |--------------|---------------|------------------|
 |              |setTimeOut(i,0)|setTimeOut(i,1000)|
 |              |               |setTimeOut(i,2000)|
 |              |               |setTimeOut(i,3000)|
 |              |               |setTimeOut(i,4000)|
 
-|call stack     |call queue     |待執行序列         |
+|call stack     |call queue     |web api           |
 |---------------|---------------|------------------|
 |setTimeOut(i,0)|               |setTimeOut(i,1000)|
 |               |               |setTimeOut(i,2000)|
 |               |               |setTimeOut(i,3000)|
 |               |               |setTimeOut(i,4000)|
 
-|call stack     |call queue     |待執行序列         |
+|call stack     |call queue     |web api           |
 |---------------|---------------|------------------|
 |               |               |setTimeOut(i,1000)|
 |               |               |setTimeOut(i,2000)|
@@ -221,19 +221,19 @@ setTimeOut(i,4000)
 |               |               |setTimeOut(i,4000)|
 
 
-|call stack    |call queue        |待執行序列         |
+|call stack    |call queue        |web api           |
 |--------------|------------------|------------------|
 |              |setTimeOut(i,1000)|setTimeOut(i,2000)|
 |              |                  |setTimeOut(i,3000)|
 |              |                  |setTimeOut(i,4000)|
 
-|call stack        |call queue     |待執行序列         |
+|call stack        |call queue     |web api           |
 |------------------|---------------|------------------|
 |setTimeOut(i,1000)|               |setTimeOut(i,2000)|
 |                  |               |setTimeOut(i,3000)|
 |                  |               |setTimeOut(i,4000)|
 
-|call stack        |call queue     |待執行序列         |
+|call stack        |call queue     |web api           |
 |------------------|---------------|------------------|
 |                  |               |setTimeOut(i,2000)|
 |                  |               |setTimeOut(i,3000)|
