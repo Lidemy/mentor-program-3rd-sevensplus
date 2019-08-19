@@ -4,12 +4,12 @@ let view = "all";
 
 //  新增留言
 $('.new-td').keydown( (event) => {
-  if(event.keyCode !== 13 || $("input[class='new-td']").val() == '') return;
+  if (event.keyCode !== 13 || $("input[class='new-td']").val() == '') return;
   const text = $("input[class='new-td']").val();
   $("input[class='new-td']").val('');
   add(text);
   render();
-})
+});
 function add(text) {
   list.push(text);
   type.push('active');
@@ -78,7 +78,7 @@ function viewer() {
     $('li').removeClass('last');
   }
 }
-function visibility(a){
+function visibility(a) {
   $('li').css('display', 'none');
   $(`.${a}`).css('display', 'list-item');
   const fir = type.indexOf(a);
