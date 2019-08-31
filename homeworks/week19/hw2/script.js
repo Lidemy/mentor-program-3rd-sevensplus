@@ -1,4 +1,4 @@
-fetch('https://www.sevvenplus.com/todoList/API/lists', {
+fetch('https://www.sevenplus.com/todoList/lists', {
   method: 'GET'
 }).then((res) => {
   return res.json();
@@ -21,7 +21,7 @@ $('.new-td').keydown((event) => {
   if (event.keyCode !== 13 || $("input[class='new-td']").val() == '') return;
   const text = $("input[class='new-td']").val();
   $("input[class='new-td']").val('');
-  fetch('https://www.sevvenplus.com/todoList/API/lists', {
+  fetch('https://www.sevenplus.com/todoList/lists', {
     method: 'POST',
     body: JSON.stringify({ 'text': text })
   }).then((res) => {
@@ -75,7 +75,7 @@ function action(a) {
   count();
 }
 function deleted(a) {
-  fetch(`https://www.sevvenplus.com/todoList/API/lists/${a}`, {
+  fetch(`https://www.sevenplus.com/todoList/lists/${a}`, {
     method: 'DELETE',
   }).then((res) => {
     return res.json();
@@ -89,7 +89,7 @@ function deleted(a) {
   })
 };
 function changeType(a, b, c) {
-  fetch(`https://www.sevvenplus.com/todoList/API/lists/${a}`, {
+  fetch(`https://www.sevenplus.com/todoList/lists/${a}`, {
     method: 'PATCH',
     body: JSON.stringify({ 'type': b })
   }).then((res) => {

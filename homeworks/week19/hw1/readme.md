@@ -1,4 +1,4 @@
-Base URL: https://www.sevvenplus.com/todoList/API
+Base URL: http://www.sevenplus.com.tw/todoList/
 
 | 說明            | Method | path           | 參數                         | 範例             |
 |---------------- |--------|---------------|------------------------------|------------------|
