@@ -1,5 +1,9 @@
-fetch('http://www.sevenplus.com.tw/todoList/lists', {
-  method: 'GET'
+fetch('http://mentor-program.co/group6/sevenplus/todoList/lists', {
+  method: 'GET',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type':'application/json',
+  }
 }).then((res) => {
   return res.json();
 }).then((res) => {
@@ -21,7 +25,7 @@ $('.new-td').keydown((event) => {
   if (event.keyCode !== 13 || $("input[class='new-td']").val() == '') return;
   const text = $("input[class='new-td']").val();
   $("input[class='new-td']").val('');
-  fetch('http://www.sevenplus.com.tw/todoList/lists', {
+  fetch('http://mentor-program.co/group6/sevenplus/todoList/lists', {
     method: 'POST',
     body: JSON.stringify({ 'text': text })
   }).then((res) => {
@@ -31,7 +35,7 @@ $('.new-td').keydown((event) => {
       jQuery('<li/>', {
         id: res.id,
         'class': 'pieces active',
-        'text':  text
+        'text': text
       }).appendTo('.td-list');
     }
     count();
@@ -75,7 +79,7 @@ function action(a) {
   count();
 }
 function deleted(a) {
-  fetch(`http://www.sevenplus.com.tw/todoList/lists/${a}`, {
+  fetch(`http://mentor-program.co/group6/sevenplus/todoList/lists/${a}`, {
     method: 'DELETE',
   }).then((res) => {
     return res.json();
@@ -89,7 +93,7 @@ function deleted(a) {
   })
 };
 function changeType(a, b, c) {
-  fetch(`http://www.sevenplus.com.tw/todoList/lists/${a}`, {
+  fetch(`http://mentor-program.co/group6/sevenplus/todoList/lists/${a}`, {
     method: 'PATCH',
     body: JSON.stringify({ 'type': b })
   }).then((res) => {

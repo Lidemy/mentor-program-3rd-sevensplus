@@ -4,10 +4,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 isset(explode("lists/",$_SERVER['REQUEST_URI'])[1])?$partID = explode('lists/',$_SERVER['REQUEST_URI'])[1] : $partID = null;
 $utils = new utilsFunction;
 
-header('Access-Control-Allow-Origin:*');
-header('Access-Control-Allow-Methods:POST, GET, PUT, OPTIONS, PATCH, DELETE');
-header('Access-Control-Allow-Headers:Origin, X-Requested-With, Content-Type, Accept, Authorization');
-header('Access-Control-Allow-Credentials:true');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST,GET,PATCH,DELETE,OPTIONS');
+header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
+header("Access-Control-Allow-Credentials: true");
 
 if($method == 'GET'){
 	if (empty($partID)){
