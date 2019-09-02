@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>備忘錄</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <main>
+            <div class="title">todos</div>
+            <div class="list_container">
+                <div><input class="new-td" type="text" placeholder="What needs to be done?"/></div>
+                <ul class="td-list">
+                </ul>
+                <div class="bottom">
+                    <span class="list_num number">0</span><span class="list_num"> items left</span>
+                    <span class="function">
+                        <button id="all">All</button>
+                        <button id="active">Active</button>
+                        <button id="completed">Complete</button>
+                        <img src="./checked.png" class="action_icon" id="complete"/>
+                        <img src="./delete.png" class="action_icon" id="delete"/>
+                    </span>
+                </div>
+            </div>
+        </main>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./script.js"></script>
+</html>

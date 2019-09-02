@@ -1,0 +1,6 @@
+Options FollowSymlinks 
+RewriteEngine on  
+
+RewriteRule ^lists$ index.php
+RewriteRule ^lists/$ index.php
+RewriteRule ^lists/([0-9]+)$ index.php/$1 
