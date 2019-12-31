@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.navBar{
+  background-color: #e2e9f3;
+  padding: 10px;
+  margin: 5px;
+  font-weight: 500;
+  color: #a0b2c9;
+}
+span {
+  margin-right: 15px;
+}
+span.here{
+  color: #505964;
+}
+.navBlog{
+  font-size: 20px;
+  color: #505964;
+}
+.homePage{
+  width: fit-content;
+  margin: auto;
+}
+.title{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.postTitle {
+  border-top: lightslategray 0.5px solid;
+  border-left: lightslategray 0.5px solid;
+  border-right: lightslategray 0.5px solid;
+  padding:15px;
+  width: 700px;
+}
+.postTitle:last-child{
+  border-bottom: lightslategray 0.5px solid;
+}
+.content {
+  margin: 30px auto;
+}
+.quote{
+  width: fit-content;
+  margin:auto;
+}
+.randomSentence {
+  margin-top: 120px;
+  width: 600px;
+}
+.sentenceAuthor {
+  margin: 20px auto;
+  text-align: right;
+}
+.singlePost{
+  width: fit-content;
+  margin: 80px  auto;
+}
+.singlePostTitle{
+  width: 800px;
+}
+.postContent{
+  width: 800px;
+}
