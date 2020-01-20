@@ -1,10 +1,10 @@
 import React from 'react';
-import {HashRouter as Router, Switch, Link, Route} from 'react-router-dom'
+import {HashRouter as Router, Link} from 'react-router-dom'
 
 function homePage () {
     const url = 'https://qootest.com/posts'
     let request = new XMLHttpRequest();
-    request.open('GET',url,false)
+    request.open('GET', url, false)
     request.send()
     const data = JSON.parse(request.responseText).filter(item => item.title !== '' && item.title !== undefined)    
 
@@ -52,7 +52,7 @@ function aboutPage () {
     function randonSentence () {
         const url = 'http://api.quotable.io/random'
         let request = new XMLHttpRequest();
-        request.open('GET',url,false)
+        request.open('GET', url, false)
         request.send()
         let data = JSON.parse(request.responseText)
         return data
